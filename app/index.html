@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#090b0d">
+    <meta name="description" content="Clifford Ray builds dependable backend systems, thoughtful web products, and clear technical experiences.">
+    <title>Clifford Ray — Backend & Product Engineer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles.css">
+    <script src="./app.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="topbar">
+      <a class="wordmark" href="#home" aria-label="Clifford Ray home"><span class="wordmark-mark">CR</span><span>CLIFFORD RAY</span></a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="#work">Selected work</a>
+        <a href="#approach">Approach</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <a class="availability" href="https://github.com/cliffray7" target="_blank" rel="noreferrer"><span class="availability-dot"></span> Backend · Full-stack</a>
+    </header>
+
+    <main id="main">
+      <section class="hero section-wrap" id="home" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <p class="eyebrow"><span class="eyebrow-line"></span> Backend systems · Product engineering</p>
+          <h1 id="hero-title">Making complex systems <span>feel simple.</span></h1>
+          <p class="hero-intro">I’m Clifford Ray, a backend and full-stack engineer building reliable platforms, useful products, and the systems that bring them together.</p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#work">Explore selected work <span aria-hidden="true">↘</span></a>
+            <a class="text-link" href="https://github.com/cliffray7" target="_blank" rel="noreferrer">GitHub profile <span aria-hidden="true">↗</span></a>
+          </div>
+          <div class="hero-meta"><span>Backend systems</span><span class="meta-divider"></span><span>Product engineering</span></div>
+        </div>
+
+        <div class="topology-panel" aria-label="Illustration of connected services in a distributed system">
+          <div class="panel-topline"><span>SYSTEM MAP / CONCEPT</span><span class="panel-status"><i></i> ILLUSTRATIVE VIEW</span></div>
+          <svg class="topology" viewBox="0 0 600 420" role="img" aria-labelledby="topology-title topology-desc">
+            <title id="topology-title">Distributed system topology</title>
+            <desc id="topology-desc">A browser connects through an API gateway to application, cache, and data services.</desc>
+            <defs>
+              <linearGradient id="route" x1="0" x2="1" y1="0" y2="1"><stop stop-color="#d89b57" stop-opacity=".75"/><stop offset="1" stop-color="#d89b57" stop-opacity=".12"/></linearGradient>
+              <radialGradient id="nodeGlow"><stop stop-color="#e9b46f" stop-opacity=".24"/><stop offset="1" stop-color="#e9b46f" stop-opacity="0"/></radialGradient>
+              <filter id="soft-glow" x="-100%" y="-100%" width="300%" height="300%"><feGaussianBlur stdDeviation="5" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+            </defs>
+            <g class="grid-lines" aria-hidden="true">
+              <path d="M0 70H600M0 140H600M0 210H600M0 280H600M0 350H600"/><path d="M70 0V420M170 0V420M270 0V420M370 0V420M470 0V420M570 0V420"/>
+            </g>
+            <g class="routes" fill="none" stroke="url(#route)" stroke-width="1.5">
+              <path d="M104 205 220 205 302 121 416 121"/><path d="M220 205 302 289 416 289"/><path d="M302 121 416 205 506 205"/><path d="M416 121 506 205 416 289"/>
+            </g>
+            <g class="route-dashes" fill="none" stroke="#f0bd7c" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+              <path class="dash dash-one" d="M104 205 220 205 302 121 416 121"/><path class="dash dash-two" d="M220 205 302 289 416 289"/><path class="dash dash-three" d="M302 121 416 205 506 205"/>
+            </g>
+            <g class="node node-client" transform="translate(104 205)"><circle class="node-halo" r="46"/><circle class="node-ring" r="25"/><circle class="node-core" r="6"/><text y="52">CLIENT</text></g>
+            <g class="node node-gateway" transform="translate(220 205)"><circle class="node-halo" r="50"/><circle class="node-ring" r="29"/><circle class="node-core" r="8"/><text y="57">API GATEWAY</text></g>
+            <g class="node" transform="translate(302 121)"><circle class="node-halo" r="43"/><circle class="node-ring" r="24"/><circle class="node-core" r="6"/><text y="49">APP SERVICE</text></g>
+            <g class="node node-cache" transform="translate(302 289)"><circle class="node-halo" r="42"/><circle class="node-ring" r="23"/><circle class="node-core" r="6"/><text y="49">CACHE</text></g>
+            <g class="node" transform="translate(416 121)"><circle class="node-halo" r="40"/><circle class="node-ring" r="21"/><circle class="node-core" r="6"/><text y="46">AUTH</text></g>
+            <g class="node" transform="translate(416 289)"><circle class="node-halo" r="42"/><circle class="node-ring" r="23"/><circle class="node-core" r="6"/><text y="49">DATABASE</text></g>
+            <g class="node node-edge" transform="translate(506 205)"><circle class="node-halo" r="37"/><circle class="node-ring" r="20"/><circle class="node-core" r="5"/><text y="44">EDGE</text></g>
+            <g class="map-caption"><text x="28" y="34">SERVICE TOPOLOGY / 01</text><text x="28" y="390">LATENCY-AWARE · FAULT-TOLERANT · OBSERVABLE</text></g>
+          </svg>
+          <div class="panel-footer"><span><b></b> 7 components shown</span><span>Example request paths <span class="pulse">•••</span></span></div>
+        </div>
+        <div class="hero-footnote"><span>01 / 04</span><span>SCROLL TO EXPLORE</span><span class="footnote-rule"></span></div>
+      </section>
+
+      <section class="terminal-section section-wrap" id="terminal" aria-labelledby="terminal-title">
+        <div class="terminal-heading"><div><p class="eyebrow"><span class="eyebrow-line"></span> A small interactive introduction</p><h2 id="terminal-title">Take a look around<span class="accent">.</span></h2></div><p>Try a command. The terminal only responds to the fixed commands listed below.</p></div>
+        <div class="terminal-window">
+          <div class="terminal-bar"><div class="terminal-controls" aria-hidden="true"><i></i><i></i><i></i></div><span>clifford-ray / profile</span><span class="terminal-readonly">READ ONLY</span></div>
+          <div class="terminal-screen">
+            <div class="terminal-welcome"><span class="terminal-accent">CR / PROFILE SHELL</span><br>Welcome. Type <code>help</code> to see available commands.</div>
+            <ol class="terminal-output" role="log" aria-live="polite" aria-relevant="additions text" aria-label="Terminal output"></ol>
+            <form class="terminal-form" autocomplete="off">
+              <label class="terminal-prompt" for="terminal-command" aria-hidden="true">cr@portfolio <span>~</span> $</label>
+              <input id="terminal-command" name="command" type="text" spellcheck="false" autocapitalize="none" autocomplete="off" aria-describedby="terminal-help" aria-label="Enter a terminal command" placeholder="type a command and press Enter">
+              <button class="terminal-submit" type="submit">RUN <span aria-hidden="true">↵</span></button>
+            </form>
+            <p id="terminal-help" class="terminal-help">Commands: <code>whoami</code> · <code>stack</code> · <code>projects</code> · <code>architecture</code> · <code>contact</code> · <code>help</code></p>
+          </div>
+        </div>
+      </section>
+
+      <section class="simulator-section section-wrap" id="simulator" aria-labelledby="simulator-title">
+        <div class="simulator-heading">
+          <div><p class="eyebrow"><span class="eyebrow-line"></span> Interactive system model</p><h2 id="simulator-title">See the trade-offs<span class="accent">.</span></h2></div>
+          <p>A small client-side model showing how load and caching can affect a request path. These values are illustrative, not production telemetry.</p>
+        </div>
+        <div class="simulator-card">
+          <div class="simulator-controls">
+            <label class="load-control" for="sim-load"><span class="control-label">SIMULATED TRAFFIC LOAD</span><output id="sim-load-value" for="sim-load">35%</output></label>
+            <input id="sim-load" type="range" min="0" max="100" value="35" aria-describedby="sim-model-note">
+            <div class="range-labels" aria-hidden="true"><span>LOW</span><span>HIGH</span></div>
+            <label class="cache-control" for="sim-cache"><span><b>Redis cache</b><small>Model a cache layer on read requests</small></span><input id="sim-cache" type="checkbox" checked><span class="cache-switch" aria-hidden="true"></span></label>
+          </div>
+          <div class="simulator-results">
+            <div class="sim-metrics" aria-live="off">
+              <div class="sim-metric"><span>MODELED LOAD</span><strong id="sim-metric-load">35%</strong></div>
+              <div class="sim-metric"><span>EST. RESPONSE TIME</span><strong id="sim-latency">—<small> ms</small></strong></div>
+              <div class="sim-metric"><span>EST. CACHE HIT RATE</span><strong id="sim-hit-rate">—<small>%</small></strong></div>
+            </div>
+            <div class="request-flow" aria-label="Illustrative request flow from client through gateway and application to cache and database">
+              <div class="flow-node"><span>01</span><b>CLIENT</b></div><i aria-hidden="true"></i><div class="flow-node"><span>02</span><b>GATEWAY</b></div><i aria-hidden="true"></i><div class="flow-node"><span>03</span><b>APP</b></div><i aria-hidden="true"></i><div class="flow-node flow-cache"><span>04</span><b>CACHE</b></div><i aria-hidden="true"></i><div class="flow-node"><span>05</span><b>DATABASE</b></div>
+            </div>
+            <p class="sim-status" id="sim-status" aria-live="polite">Simulation ready. Adjust the controls to explore the model.</p>
+          </div>
+        </div>
+        <p class="sim-model-note" id="sim-model-note">Illustrative model only: response time rises with load; enabled caching reduces the modeled response time and shows an estimated read hit rate. It does not call a backend or measure a real service.</p>
+      </section>
+
+      <section class="work-section section-wrap" id="work" aria-labelledby="work-title">
+        <div class="section-heading">
+          <div><p class="eyebrow"><span class="eyebrow-line"></span> A few things I’ve been building</p><h2 id="work-title">Selected work<span class="accent">.</span></h2></div>
+          <p class="section-aside">Systems designed around the people who depend on them.</p>
+        </div>
+        <div class="work-grid">
+          <article class="project-card project-card-featured">
+            <div class="project-visual legal-visual" aria-hidden="true"><div class="visual-orbit orbit-a"></div><div class="visual-orbit orbit-b"></div><div class="legal-mark">BM<span>.</span></div><div class="visual-label">PRACTICE / PLATFORM</div><div class="visual-index">01</div></div>
+            <div class="project-info"><div class="project-kicker"><span>LEGAL TECHNOLOGY</span><span>CASE STUDY IN PROGRESS</span></div><h3>B. Madialo Company &amp; Advocates</h3><p>Practice management system. A detailed case study and supporting technical documentation are in progress.</p><div class="tag-list"><span>Laravel 11</span><span>Inertia.js</span><span>React</span><span>Redis</span></div><a class="project-link" href="https://github.com/cliffray7" target="_blank" rel="noreferrer">View GitHub profile <span aria-hidden="true">↗</span></a></div>
+          </article>
+          <article class="project-card">
+            <div class="project-visual sababisha-visual" aria-hidden="true"><div class="tenant tenant-one">TENANT 01 <i></i></div><div class="tenant tenant-two">TENANT 02 <i></i></div><div class="tenant tenant-three">TENANT 03 <i></i></div><div class="tenant-core">CORE<br>PLATFORM</div><div class="visual-label">MULTI-TENANT / PMS</div><div class="visual-index">02</div></div>
+            <div class="project-info"><div class="project-kicker"><span>PLATFORM ENGINEERING</span><span>CASE STUDY IN PROGRESS</span></div><h3>SABABISHA-PMS</h3><p>Multi-tenant system. A detailed case study and supporting technical documentation are in progress.</p><div class="tag-list"><span>.NET 8</span><span>SQL Server</span><span>GraphQL</span><span>Docker</span></div><a class="project-link" href="https://github.com/cliffray7" target="_blank" rel="noreferrer">View GitHub profile <span aria-hidden="true">↗</span></a></div>
+          </article>
+        </div>
+      </section>
+
+      <section class="approach-section section-wrap" id="approach" aria-labelledby="approach-title">
+        <div class="approach-intro"><p class="eyebrow"><span class="eyebrow-line"></span> How I work</p><h2 id="approach-title">Good engineering is felt in the details<span class="accent">.</span></h2><p>I care about the parts people rely on but rarely see: thoughtful boundaries, clear interfaces, useful feedback, and systems that stay understandable as they grow.</p></div>
+        <div class="principles">
+          <article><span class="principle-number">01</span><div><h3>Make the shape clear</h3><p>Design services and interfaces with responsibilities people can explain.</p></div><span class="principle-symbol">↗</span></article>
+          <article><span class="principle-number">02</span><div><h3>Build for real workflows</h3><p>Start with the work someone needs to get done, then remove friction.</p></div><span class="principle-symbol">⌁</span></article>
+          <article><span class="principle-number">03</span><div><h3>Leave room to grow</h3><p>Favor reliable foundations that can evolve without a rewrite.</p></div><span class="principle-symbol">◎</span></article>
+        </div>
+      </section>
+
+      <section class="contact-section section-wrap" id="contact" aria-labelledby="contact-title">
+        <div class="contact-panel"><div><p class="eyebrow"><span class="eyebrow-line"></span> Have a system to make simpler?</p><h2 id="contact-title">Let’s build something <span>dependable.</span></h2></div><a class="button button-primary" href="https://github.com/cliffray7" target="_blank" rel="noreferrer">Connect on GitHub <span aria-hidden="true">↗</span></a><div class="contact-index">CR / <span id="year-contact">2026</span></div></div>
+      </section>
+    </main>
+
+    <footer class="footer section-wrap"><a class="wordmark footer-mark" href="#home"><span class="wordmark-mark">CR</span><span>CLIFFORD RAY</span></a><span>Thoughtful systems. Useful software.</span><a href="https://github.com/cliffray7" target="_blank" rel="noreferrer">GITHUB ↗</a><span>© <span id="year">2026</span> Clifford Ray</span></footer>
+  </body>
+</html>
