@@ -4,6 +4,11 @@ import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
 const year = new Date().getFullYear()
+const isDark = ref(false)
+function toggleTheme() {
+  isDark.value = !isDark.value
+  localStorage.setItem('clifford-portfolio-theme', isDark.value ? 'dark' : 'light')
+}
 let ctx: gsap.Context | undefined
 
 useSeoMeta({
@@ -14,23 +19,25 @@ useSeoMeta({
 })
 
 const skills = [
-  { title: 'Backend', description: 'I build backend applications and APIs, working with application architecture, authentication, data access and business logic.', tags: ['C#', '.NET 8', 'ASP.NET Core', 'EF Core', 'Dapper', 'REST', 'GraphQL'] },
-  { title: 'Frontend', description: 'I build responsive web experiences and connect interfaces to backend services using modern frontend tools.', tags: ['React', 'Vue', 'Nuxt', 'TypeScript', 'Tailwind CSS'] },
-  { title: 'Data & architecture', description: 'I work with relational databases and think through modular systems, multi-tenancy, access control and maintainable boundaries.', tags: ['SQL Server', 'PostgreSQL', 'System design', 'Multi-tenancy'] },
-  { title: 'Delivery & DevOps', description: 'I work with source control, containerised development and deployment workflows for web applications.', tags: ['Git', 'Docker', 'CI/CD', 'Vercel', 'Railway', 'Render'] }
+  { title: 'Frontend development', description: 'Building responsive interfaces and integrating them with application APIs.', tags: ['React', 'JavaScript', 'TypeScript', 'Tailwind CSS'] },
+  { title: 'Backend development', description: 'Developing application services, REST APIs, authentication and data-driven features.', tags: ['C#', 'ASP.NET Core', 'REST APIs', 'API design'] },
+  { title: 'System design', description: 'Applying practical architecture concepts to keep applications modular, secure and maintainable.', tags: ['Modular architecture', 'Monoliths & microservices', 'Multi-tenancy', 'Scalability'] },
+  { title: 'DevOps & delivery', description: 'Working with development environments, source control, deployment and delivery automation.', tags: ['Docker', 'GitHub Actions', 'CI/CD', 'Linux', 'Nginx', 'Azure'] }
 ]
 const projects = [
-  { name: 'TaskFlow PMS', kind: 'PROJECT MANAGEMENT PLATFORM', description: 'A team-focused project management platform covering workspaces, projects, boards, tasks, collaboration and role-based access.', stack: '.NET 8 · React · SQL Server · GraphQL', state: 'In development', art: 'taskflow' },
-  { name: 'Griot', kind: 'AI-ASSISTED PROJECT MANAGEMENT', description: 'An AI-assisted project management platform exploring contextual workflows, multi-tenancy and auditable platform operations.', stack: '.NET 8 · PostgreSQL · React · AI integration', state: 'In development', art: 'griot' },
-  { name: 'ChamaFlow', kind: 'MOBILE APPLICATION', description: 'A chama contribution and member-tracking application built around Firebase authentication and Firestore data.', stack: 'Java · Android · Firebase · Firestore', state: 'Personal project', art: 'chama' },
-  { name: 'Sababisha Solutions', kind: 'PROFESSIONAL EXPERIENCE', description: 'Currently working at Sababisha Solutions Limited, contributing to software and platform development.', stack: '.NET · SQL Server · Web applications', state: 'Professional experience', art: 'sababisha' }
+  { name: 'TaskFlow PMS', kind: 'PROJECT MANAGEMENT PLATFORM', description: 'A project and task management platform with workspaces, projects, boards, task workflows, collaboration and role-based access.', stack: '.NET 8 · ASP.NET Core · React · SQL Server · GraphQL', state: 'Active development', art: 'taskflow' },
+  { name: 'Griot', kind: 'AI-ASSISTED PROJECT MANAGEMENT', description: 'An AI-assisted project management platform focused on contextual workflows, tenant separation and auditable platform operations.', stack: '.NET 8 · PostgreSQL · AI integration', state: 'Active development', art: 'griot' },
+  { name: 'SABABISHA-PMS', kind: 'BUSINESS MANAGEMENT PLATFORM', description: 'Business software work involving API development, database-backed workflows, administration and platform operations.', stack: 'C# · ASP.NET Core · SQL Server · EF Core', state: 'Professional project work', art: 'sababisha' }
 ]
 const technologies = [
-  { title: 'Frontend', items: ['HTML', 'CSS', 'JavaScript', 'TypeScript', 'React', 'Vue', 'Nuxt', 'Tailwind CSS'] },
-  { title: 'Backend', items: ['C#', '.NET', 'ASP.NET Core', 'Node.js', 'Python', 'REST APIs', 'GraphQL'] },
-  { title: 'Data & tools', items: ['SQL Server', 'PostgreSQL', 'MySQL', 'Firebase', 'Git', 'Docker', 'CI/CD'] }
+  { title: 'Frontend', items: ['JavaScript', 'TypeScript', 'React', 'Tailwind CSS'] },
+  { title: 'Backend & APIs', items: ['C#', 'ASP.NET Core', '.NET', 'REST APIs', 'API design'] },
+  { title: 'Databases', items: ['SQL Server', 'PostgreSQL', 'MySQL', 'Firebase'] },
+  { title: 'Architecture & DevOps', items: ['Modular architecture', 'Monoliths', 'Microservices concepts', 'Docker', 'GitHub Actions', 'Linux', 'Nginx', 'CI/CD'] },
+  { title: 'Cloud & deployment', items: ['Azure', 'Vercel', 'Render', 'Railway'] }
 ]
 onMounted(() => {
+  isDark.value = localStorage.getItem('clifford-portfolio-theme') === 'dark'
   if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return
   gsap.registerPlugin(ScrollTrigger)
   ctx = gsap.context(() => {
@@ -45,7 +52,7 @@ onBeforeUnmount(() => ctx?.revert())
 </script>
 
 <template>
-  <div class="portfolio-page">
+  <div class="portfolio-page" :class="{ 'theme-dark': isDark }">
     <div class="portfolio-shell">
       <div class="layout-grid">
         <aside class="side-rail">
@@ -64,6 +71,7 @@ onBeforeUnmount(() => ctx?.revert())
               <a href="#about">about</a>
               <a href="#stack">tech stack</a>
               <a href="#contact">contact</a>
+              <button class="theme-toggle" type="button" @click="toggleTheme" :aria-label="isDark ? 'Switch to light mode' : 'Switch to dark mode'"><span>{{ isDark ? '☀' : '☾' }}</span>{{ isDark ? 'LIGHT' : 'DARK' }}</button>
             </div>
           </nav>
 
@@ -72,13 +80,13 @@ onBeforeUnmount(() => ctx?.revert())
               <div class="hero-copy">
                 <div class="callout">It's me</div>
                 <h1 aria-label="Clifford Ray"><span v-for="(letter, i) in 'CLIFFORD'" :key="'a'+i" class="hero-letter">{{ letter }}</span><br><span v-for="(letter, i) in 'RAY'" :key="'b'+i" class="hero-letter">{{ letter }}</span><span class="name-dot">.</span></h1>
-                <p class="hero-role">SOFTWARE ENGINEER</p>
-                <p class="hero-description">I’m Clifford Ray, a software engineer from Kenya. I build backend systems, web applications and practical digital products, with a growing focus on system design and DevOps.</p>
+                <p class="hero-role">SOFTWARE DEVELOPER</p>
+                <p class="hero-description">I’m Clifford Ray, a Software Developer at Sababisha Solutions Limited. I work across frontend and backend development, build API-driven applications, and apply system design and DevOps practices to deliver maintainable software.</p>
                 <a class="talk-link" href="https://github.com/cliffray7" target="_blank" rel="noreferrer"><span class="talk-circle"><span>LET'S<br>S TALK</span></span><span class="talk-caption">LET'S CONNECT <b>↗</b></span></a>
               </div>
               <div class="hero-visual" aria-label="Clifford Ray monogram illustration">
                 <div class="visual-orbit orbit-one"></div><div class="visual-orbit orbit-two"></div>
-                <div class="visual-card"><span class="visual-small">BUILDING WITH PURPOSE</span><strong>CR</strong><span class="visual-bottom">BACKEND · FULL-STACK<br>KENYA / 2026</span></div>
+                <div class="visual-card"><span class="visual-small">BUILDING WITH PURPOSE</span><strong>CR</strong><span class="visual-bottom">FRONTEND · BACKEND<br>SYSTEM DESIGN · DEVOPS</span></div>
                 <span class="visual-spark spark-one">✳</span><span class="visual-spark spark-two">✳</span>
               </div>
             </section>
@@ -103,26 +111,26 @@ onBeforeUnmount(() => ctx?.revert())
             <section id="about" class="about-section" data-reveal>
               <div class="about-card">
                 <div class="about-top">
-                  <div class="about-portrait"><span class="portrait-mark">CR</span><span class="portrait-caption">CLIFFORD RAY · SOFTWARE ENGINEER</span></div>
+                  <div class="about-portrait"><span class="portrait-mark">CR</span><span class="portrait-caption">CLIFFORD RAY · SOFTWARE DEVELOPER</span></div>
                   <div class="about-facts">
-                    <div><span class="fact-icon">⌘</span><p>Building <b>backend systems</b> and web applications</p></div>
-                    <div><span class="fact-icon">◈</span><p>Exploring <b>system design</b> and scalable architecture</p></div>
-                    <div><span class="fact-icon">⌁</span><p>Working with <b>DevOps and delivery workflows</b></p></div>
-                    <div><span class="fact-icon">◎</span><p>Currently at <b>Sababisha Solutions Limited</b></p></div>
+                    <div><span class="fact-icon">⌘</span><p>Working across <b>frontend and backend development</b></p></div>
+                    <div><span class="fact-icon">◈</span><p>Applying <b>system design</b> and modular architecture</p></div>
+                    <div><span class="fact-icon">⌁</span><p>Using <b>DevOps and CI/CD</b> workflows</p></div>
+                    <div><span class="fact-icon">◎</span><p>Software Developer at <b>Sababisha Solutions Limited</b></p></div>
                   </div>
                 </div>
                 <div class="about-readme">
                   <div class="readme-heading">README</div>
                   <div class="section-rule"></div>
-                  <p>I’m a software engineer focused on building useful, maintainable software. My work spans backend development, web applications, database-backed systems and product workflows.</p>
-                  <p>I enjoy understanding how systems fit together — from API contracts and data models to user interfaces, access control and deployment. I’m continuing to deepen my skills in system design and DevOps through hands-on product work.</p>
-                  <p>My approach is practical: understand the problem, make the architecture clear, build in small steps and keep the software understandable as it grows.</p>
+                  <p>I’m a Software Developer at Sababisha Solutions Limited, working across frontend and backend development. My experience includes building web applications, developing REST APIs, integrating databases and implementing product workflows.</p>
+                  <p>I’m interested in how systems fit together: API contracts, data models, authentication and authorization, modular architecture, deployment and operational reliability. I apply system design concepts across monolithic and microservice-based architectures.</p>
+                  <p>My toolkit includes C#, ASP.NET Core, React, JavaScript, TypeScript, SQL Server, PostgreSQL, MySQL and Firebase, alongside Docker, GitHub Actions, Linux, Nginx and cloud deployment platforms.</p>
                 </div>
               </div>
             </section>
 
             <section id="work" class="content-section work-section" data-reveal>
-              <div class="section-intro"><h2>my works</h2><p>a few of my current and past projects</p><div class="section-rule"></div></div>
+              <div class="section-intro"><h2>my works</h2><p>selected projects and professional work</p><div class="section-rule"></div></div>
               <h3 class="subheading">Web & software applications</h3>
               <div class="project-grid">
                 <article v-for="(project, index) in projects" :key="project.name" class="project-card">
@@ -137,7 +145,7 @@ onBeforeUnmount(() => ctx?.revert())
                   <div class="project-info"><span class="project-state">{{ project.state }}</span><h4>{{ project.name }}</h4><p>{{ project.description }}</p><span class="project-stack">{{ project.stack }}</span></div>
                 </article>
               </div>
-              <div class="resume-callout"><p><b>I cook with these ingredients →</b><span>Languages, frameworks, databases and delivery tools I use in my work.</span></p><a href="#stack" class="coral-button">VIEW MY TECH STACK <span>↗</span></a></div>
+              <div class="resume-callout"><p><b>How I build software →</b><span>Languages, frameworks, databases and delivery tools I use in my work.</span></p><a href="#stack" class="coral-button">VIEW MY TECH STACK <span>↗</span></a></div>
             </section>
 
             <section id="stack" class="content-section tech-section" data-reveal>
@@ -147,7 +155,7 @@ onBeforeUnmount(() => ctx?.revert())
 
             <section id="contact" class="contact-section" data-reveal>
               <h2>keep in touch</h2><p>Kenya</p><a class="contact-github" href="https://github.com/cliffray7" target="_blank" rel="noreferrer">github.com/cliffray7 <span>↗</span></a>
-              <div class="social-links"><a href="https://github.com/cliffray7" target="_blank" rel="noreferrer">GitHub</a><a href="https://www.linkedin.com/" target="_blank" rel="noreferrer">LinkedIn</a></div>
+              <div class="social-links"><a href="https://github.com/cliffray7" target="_blank" rel="noreferrer">GitHub</a></div>
             </section>
           </main>
           <footer class="site-footer"><span>CR</span><div><a href="#work">works</a><a href="#about">about</a><a href="#stack">tech stack</a></div><p>© {{ year }} clifford ray. all rights reserved</p></footer>
