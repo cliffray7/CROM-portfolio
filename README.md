@@ -1,21 +1,43 @@
-# Clifford Ray Portfolio & System Engineering Architecture
+# Clifford Ray — Portfolio & System Engineering
 
-This repository contains the architecture, roadmap, quality gates, and technical standards for building and scaling the portfolio and platform ecosystem for **Madialo Clifford Ray** (Backend Microservices Engineer & Full-Stack Developer).
+This repository contains the portfolio website and supporting engineering documentation for Clifford Ray.
 
-## Portfolio app
+## Portfolio applications
 
-The first static portfolio page is in [`app/`](app/). Open [`app/index.html`](app/index.html) in a browser to view the landing page. Its service topology is an illustrative SVG; the planned interactive WebGL graph and architecture demos are still open roadmap work.
+- **Nuxt application:** [`web/`](web/) — current implementation workspace using Nuxt 3, Vue 3, TypeScript, Tailwind CSS, and GSAP.
+- **Static baseline:** [`app/`](app/) — original dependency-free portfolio page retained while the Nuxt implementation is validated.
 
-## 🛠 Developer Overview
-- **Name:** Madialo Clifford Ray
-- **Role:** Backend Microservices Engineer | Full-Stack Developer
-- **Portfolio Domain:** clifford-ray-portfolio.vercel.app
-- **GitHub:** github.com/cliffray7
-- **Core Technologies:** Python (Flask), Node.js (Express), PHP (Laravel 11), ASP.NET Core (.NET 8 Microservices), React, Next.js, Inertia.js, Flutter, Docker, Redis, SQL Server, PostgreSQL, GraphQL, REST APIs.
+To run the Nuxt app locally:
 
----
+```bash
+cd web
+npm install
+npm run dev
+```
 
-## 📌 Key Architectural Pillars
-1. **Microservices & Multi-Tenancy:** Robust system design with strict API contracts, role-based access control (RBAC), and containerized deployments.
-2. **3D Topology & Engineering Aesthetics:** Planned interactive Three.js node visualizer for distributed system interactions, latency metrics, and traffic flows. The current landing page uses a static SVG illustration.
-3. **Automated Quality Gates:** Strict linting, contract sync, and security audits integrated into pre-commit and pre-push hooks.
+Requires Node.js 20 or later. See [web/README.md](web/README.md) for build and type-check commands.
+
+## Portfolio direction
+
+The portfolio presents backend engineering, full-stack product development, system design, and DevOps capabilities through concise explanations and verified project case studies. The visual direction retains CROM's dark editorial palette, amber accents, and technical diagrams.
+
+## Architecture and quality principles
+
+1. **Clear system boundaries:** document responsibilities, interfaces, tenancy, and security assumptions.
+2. **Evidence-led project stories:** describe actual contributions and verified outcomes; do not inflate experience or metrics.
+3. **Accessible interactions:** keyboard support, visible focus, responsive layouts, and reduced-motion support.
+4. **Reproducible delivery:** keep dependencies explicit and run type-check/build verification before deployment.
+5. **Honest technical visuals:** topology diagrams and browser simulators are clearly labelled as illustrative unless connected to real telemetry.
+
+## Documentation
+
+- [Portfolio reverse-engineering specification](docs/portfolio-reverse-engineering-spec.md)
+- [Nuxt application setup](web/README.md)
+
+## Developer overview
+
+- **Name:** Clifford Ray
+- **Focus:** Backend engineering, full-stack development, system design, and DevOps.
+- **GitHub:** [github.com/cliffray7](https://github.com/cliffray7)
+
+Project-specific technologies and responsibilities should be described in each case study only after they have been verified.
