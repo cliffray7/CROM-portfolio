@@ -19,7 +19,7 @@ Requires Node.js 20 or later. See [web/README.md](web/README.md) for build and t
 
 ## Portfolio direction
 
-The portfolio presents backend engineering, full-stack product development, system design, and DevOps capabilities through concise explanations and verified project case studies. The visual direction retains CROM's dark editorial palette, amber accents, and technical diagrams.
+The portfolio presents backend engineering, full-stack product development, system design, and DevOps capabilities through concise explanations and verified project case studies. The visual direction follows the supplied Kenjimmy portfolio reference: a light editorial layout, coral-led accent palette, compact side rail, section-based navigation, and an optional persistent dark theme.
 
 ## Architecture and quality principles
 
