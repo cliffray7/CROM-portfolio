@@ -59,7 +59,6 @@ onBeforeUnmount(() => ctx?.revert())
           <a href="#home" class="side-logo" aria-label="Clifford Ray home">CR</a>
           <div class="side-line"></div>
           <a href="https://github.com/cliffray7" target="_blank" rel="noreferrer" aria-label="GitHub">GH</a>
-          <a href="https://www.linkedin.com/" target="_blank" rel="noreferrer" aria-label="LinkedIn">in</a>
           <span class="side-vertical">SOFTWARE ENGINEER · KENYA</span>
         </aside>
 
