@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="900" viewBox="0 0 1200 900" fill="none">
+  <title>Systems, drawn as an editorial engineering illustration</title>
+  <desc>Abstract paths and connected points arranged around a warm amber center, with no portrait or interface imagery.</desc>
+  <defs>
+    <linearGradient id="field" x1="105" y1="87" x2="1114" y2="837" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#303B49"/><stop offset="1" stop-color="#151A22"/>
+    </linearGradient>
+    <linearGradient id="glow" x1="332" y1="237" x2="937" y2="738" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#EAA35E"/><stop offset="1" stop-color="#F2D4A7"/>
+    </linearGradient>
+    <radialGradient id="core" cx="0" cy="0" r="1" gradientTransform="matrix(235 0 0 235 634 456)" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#E9A464" stop-opacity=".2"/><stop offset="1" stop-color="#E9A464" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="grid" width="44" height="44" patternUnits="userSpaceOnUse">
+      <circle cx="1" cy="1" r="1" fill="#E7E8EA" fill-opacity=".14"/>
+    </pattern>
+  </defs>
+  <rect x="24" y="24" width="1152" height="852" rx="20" fill="url(#field)"/>
+  <rect x="24" y="24" width="1152" height="852" rx="20" fill="url(#grid)"/>
+  <path d="M89 101h1022v698H89z" stroke="#F4F0EB" stroke-opacity=".1"/>
+  <path d="M89 152h1022M89 748h1022M140 101v698M1060 101v698" stroke="#F4F0EB" stroke-opacity=".08"/>
+  <circle cx="634" cy="456" r="274" fill="url(#core)"/>
+  <g stroke="#E8E1D8" stroke-opacity=".4">
+    <path d="M634 456 296 270l-108 70M634 456l-26-285M634 456l356-154 62 74M634 456l330 194 107-24M634 456l-236 241-167-69"/>
+    <path d="m296 270 111-70M608 171l-12-45M990 302l-19-89M964 650l13 79M398 697l20 65" stroke-dasharray="5 10"/>
+  </g>
+  <g stroke="url(#glow)" stroke-width="2">
+    <circle cx="634" cy="456" r="176"/><circle cx="634" cy="456" r="219" stroke-opacity=".35" stroke-dasharray="3 12"/>
+    <path d="M460 456h348M634 282v348" stroke-opacity=".45"/>
+  </g>
+  <circle cx="634" cy="456" r="119" fill="#222A34" stroke="#F0C28A" stroke-opacity=".8"/>
+  <circle cx="634" cy="456" r="101" stroke="#F4F0EB" stroke-opacity=".12"/>
+  <path d="M634 387v139m-69-69h138" stroke="#E9A464" stroke-opacity=".5"/>
+  <circle cx="634" cy="456" r="7" fill="#F2D4A7"/>
+  <g fill="#F2D4A7" stroke="#303B49" stroke-width="8">
+    <circle cx="296" cy="270" r="13"/><circle cx="608" cy="171" r="13"/><circle cx="990" cy="302" r="13"/><circle cx="964" cy="650" r="13"/><circle cx="398" cy="697" r="13"/>
+  </g>
+  <g fill="#F4F0EB" font-family="Arial,sans-serif" font-size="13" letter-spacing="3">
+    <text x="120" y="133">SYSTEMS / 01</text><text x="866" y="766">DESIGN WITH INTENT</text>
+  </g>
+  <path d="M1075 128h18v18h-18z" stroke="#E9A464"/><path d="M1084 132v10m-5-5h10" stroke="#E9A464"/>
+</svg>

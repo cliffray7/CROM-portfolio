@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760" fill="none">
+  <title>TaskFlow PMS abstract project artwork</title>
+  <desc>An editorial illustration of connected task pathways, presented as artwork rather than a product screenshot.</desc>
+  <defs>
+    <linearGradient id="bg" x1="125" y1="52" x2="1076" y2="710" gradientUnits="userSpaceOnUse"><stop stop-color="#303A4A"/><stop offset="1" stop-color="#171E29"/></linearGradient>
+    <linearGradient id="path" x1="221" y1="505" x2="971" y2="252" gradientUnits="userSpaceOnUse"><stop stop-color="#D4A773"/><stop offset="1" stop-color="#E9DED0"/></linearGradient>
+    <pattern id="dots" width="35" height="35" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1.5" fill="#E9E1D7" fill-opacity=".18"/></pattern>
+  </defs>
+  <rect width="1200" height="760" fill="url(#bg)"/><rect width="1200" height="760" fill="url(#dots)"/>
+  <path d="M97 566h1006M97 194h1006" stroke="#F4EFE8" stroke-opacity=".1"/>
+  <g stroke="url(#path)" stroke-width="3"><path d="M157 495h227l101-122h210l112 106h236"/><path d="M280 272v139l104 84m311-122 55-153 169-57" stroke-opacity=".45"/><path d="M594 373v218l151-112" stroke-opacity=".3"/></g>
+  <g fill="#202936" stroke="#E7BD8B" stroke-width="3"><circle cx="157" cy="495" r="18"/><circle cx="384" cy="495" r="18"/><circle cx="485" cy="373" r="18"/><circle cx="695" cy="373" r="18"/><circle cx="807" cy="479" r="18"/><circle cx="1043" cy="479" r="18"/><circle cx="280" cy="272" r="13"/><circle cx="916" cy="251" r="13"/><circle cx="594" cy="591" r="13"/></g>
+  <g fill="#F3E8D8"><circle cx="157" cy="495" r="5"/><circle cx="485" cy="373" r="5"/><circle cx="807" cy="479" r="5"/><circle cx="1043" cy="479" r="5"/></g>
+  <path d="M150 621h192m-192 12h118M859 142h179m-179 12h109" stroke="#E8E1D8" stroke-opacity=".35" stroke-width="4" stroke-linecap="round"/>
+  <text x="99" y="115" fill="#F4EFE8" font-family="Arial,sans-serif" font-size="15" letter-spacing="4">TASKFLOW / WORK IN MOTION</text>
+  <text x="906" y="675" fill="#D7B48B" font-family="Arial,sans-serif" font-size="13" letter-spacing="3">01 — CONNECTED PATHS</text>
+</svg>

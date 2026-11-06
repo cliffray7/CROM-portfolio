@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760" fill="none">
+  <title>SABABISHA-PMS abstract project artwork</title>
+  <desc>An editorial illustration of steady geometric forms and linked lines, presented as artwork rather than a product screenshot.</desc>
+  <defs>
+    <linearGradient id="bg" x1="86" y1="34" x2="1089" y2="744" gradientUnits="userSpaceOnUse"><stop stop-color="#493630"/><stop offset="1" stop-color="#211D1B"/></linearGradient>
+    <linearGradient id="stone" x1="356" y1="203" x2="838" y2="597" gradientUnits="userSpaceOnUse"><stop stop-color="#E8D3B4"/><stop offset="1" stop-color="#BF8966"/></linearGradient>
+    <pattern id="grain" width="38" height="38" patternUnits="userSpaceOnUse"><circle cx="3" cy="3" r="1.2" fill="#F1E7DB" fill-opacity=".12"/></pattern>
+  </defs>
+  <rect width="1200" height="760" fill="url(#bg)"/><rect width="1200" height="760" fill="url(#grain)"/>
+  <path d="M95 579h1010M95 183h1010" stroke="#F2EADF" stroke-opacity=".1"/>
+  <path d="m322 497 210-213 165 125 190-172" stroke="url(#stone)" stroke-width="2"/>
+  <path d="M322 497v-95l210-213v95m0 0 165 125v-95m0 95 190-172v95" stroke="#E6D7C5" stroke-opacity=".5" stroke-width="1.5"/>
+  <path d="m322 497 210 99 165-91 190-76" stroke="#B99778" stroke-opacity=".65" stroke-width="1.5" stroke-dasharray="6 8"/>
+  <path d="m322 402 210 100 165-90 190-76" stroke="#F0E7DA" stroke-opacity=".16"/>
+  <g fill="#322723" stroke="#E7C59D" stroke-width="3"><circle cx="322" cy="497" r="13"/><circle cx="532" cy="284" r="13"/><circle cx="697" cy="409" r="13"/><circle cx="887" cy="237" r="13"/><circle cx="532" cy="596" r="10"/><circle cx="697" cy="505" r="10"/></g>
+  <g fill="#EADDC9" font-family="Arial,sans-serif" font-size="12" letter-spacing="2"><text x="273" y="550">SERVICE</text><text x="485" y="248">DATA</text><text x="664" y="453">PROCESS</text><text x="844" y="202">DELIVERY</text></g>
+  <text x="90" y="110" fill="#F3ECE1" font-family="Arial,sans-serif" font-size="15" letter-spacing="4">SABABISHA-PMS / PLATFORM WORK</text>
+  <text x="871" y="670" fill="#D5B393" font-family="Arial,sans-serif" font-size="13" letter-spacing="3">03 — STRUCTURE &amp; FLOW</text>
+</svg>
